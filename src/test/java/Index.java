@@ -26,5 +26,7 @@ public class Index {
     }
 
     @AfterClass
-    public void 
+    public void public void stop(){
+        wd.close();
+    }
 }
