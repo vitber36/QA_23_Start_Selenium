@@ -56,7 +56,7 @@ public class Index {
 
         //by id
         WebElement elem3=wd.findElement(By.id("nav"));
-        WebElement elem4=wd.findElement(By.id("#nav"));
+        WebElement elem4=wd.findElement(By.cssSelector("#nav"));
 
 
         //by attribute
