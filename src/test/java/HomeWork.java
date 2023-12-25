@@ -50,6 +50,10 @@ public class HomeWork {
         WebElement class6=wd.findElement(By.cssSelector(".login_login__3EHKB"));
 
         //by attribute
+        WebElement atr1=wd.findElement(By.cssSelector("[id='root']"));
+        WebElement atr2=wd.findElement(By.xpath("//*[@id='root']"));
+        WebElement atr3=wd.findElement(By.cssSelector("[href='/home']"));
+        WebElement atr4=wd.findElement(By.xpath("//*[@href='/home']"));
 
         //one of elements find by attribute===>start end contains
         WebElement attr1=wd.findElement(By.cssSelector("[placeholder='Email']"));
@@ -85,6 +89,31 @@ public class HomeWork {
         WebElement cont4=wd.findElement(By.xpath("//a[contains(@href,'om')]"));
         WebElement cont5=wd.findElement(By.cssSelector("[type*='ubm']"));
         WebElement cont6=wd.findElement(By.xpath("//*[contains(@type,'ubm')]"));
+        WebElement cont7=wd.findElement(By.xpath("//a[3]"));
+    }
+
+    @Test
+    public void classWork(){
+        //parent
+        WebElement par1=wd.findElement(By.xpath("//h1/parent::*"));
+        WebElement par2=wd.findElement(By.xpath("//h1/parent::div"));
+        WebElement par3=wd.findElement(By.xpath("//h1/.."));
+
+        //ancestor
+        WebElement anc1=wd.findElement(By.xpath("//h1/ancestor::div"));//two options
+        WebElement anc2=wd.findElement(By.xpath("//h1/ancestor::*"));//all
+        WebElement anc3=wd.findElement(By.xpath("//h1/ancestor::div[2]"));//one options
+
+        //ancestor or self
+        WebElement ancOrS1=wd.findElement(By.xpath("//h1/ancestor-or-self::*"));
+        List<WebElement>list1=wd.findElements(By.xpath("//h1/ancestor-or-self::*"));
+
+        //following-sibling
+        List<WebElement>list2=wd.findElements(By.xpath("//h1/following-sibling::a"));
+
+        //preceding-sibling
+        WebElement pres=wd.findElement(By.xpath("//a[last()]/preceding-sibling::h1"));
+        List<WebElement>list3=wd.findElements(By.xpath("//a[last()]/preceding-sibling::a"));
     }
 
     @AfterClass
