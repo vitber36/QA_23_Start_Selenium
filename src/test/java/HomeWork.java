@@ -116,6 +116,24 @@ public class HomeWork {
         List<WebElement>list3=wd.findElements(By.xpath("//a[last()]/preceding-sibling::a"));
     }
 
+    @Test
+    public void classwork2(){
+        WebElement element = wd.findElement(By.name("login"));
+        String text= element.getText();
+        System.out.println(text);
+
+        WebElement form = wd.findElement(By.xpath("//form"));
+        String textForm = form.getText();
+        System.out.println("*********************");
+        System.out.println(textForm);
+
+
+        WebElement html = wd.findElement(By.tagName("html"));
+        String textAll = html.getText();
+        System.out.println("*********************");
+        System.out.println(textAll);
+    }
+
     @AfterClass
     public void stop(){
         wd.close();
